@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hash Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Hash Generator</h1>
+        <textarea id="TextBox" placeholder="Enter text here..."></textarea> 
+        <div class="HashButtons">
+            <button onclick="generateHash('MD5')">Generate MD5</button>
+            <button onclick="generateHash('SHA1')">Generate SHA-1</button>
+            <button onclick="generateHash('SHA256')">Generate SHA-256</button>
+            <button onclick="generateHash('SHA512')">Generate SHA-512</button>
+        </div>
+        <h2>Output:</h2>
+        <textarea id="OutputText" readonly placeholder="Hash will appear here..."></textarea>
+    </div>
+</body>
+</html>
