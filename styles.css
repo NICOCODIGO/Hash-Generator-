@@ -1,0 +1,114 @@
+:root { /* Matrix-inspired color scheme, this is settings that has been created that can be called in later */
+  --bg:#000;
+  --overlay: rgba(0,0,0,0.36);
+  --text:#bfffbf;        /* slightly pale green for content */
+  --muted:#9adf9a;       /* softer green */
+  --accent:#8cff6e;      /* bright matrix green */
+  --panel: rgba(0,0,0,0.6);
+  --glass: rgba(255,255,255,0.02);
+}
+
+html,body{
+    height:100%;
+    margin:0;
+    background:var(--bg);
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--text);
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+}
+
+#matrixCanvas {
+  position: fixed; /* Make sure the canvas covers the entire viewport */
+  inset: 0;
+  z-index: 0;
+  display: block;
+  pointer-events: none;
+  background: #000;
+}
+
+.overlay {
+  position:fixed;
+  inset:0;
+  z-index:1;
+  background:var(--overlay);
+  pointer-events:none;
+}
+
+.container { /* wher there text, box and input is placed to the center, the main content */
+  position:relative;
+  z-index:2; /* makes the container appear above the overlay, more brighter */
+  max-width:960px;
+  margin:3rem auto; 
+  padding: 1.4rem; /* Add padding for better spacing so the content doesn't touch the edges */
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.0));
+  border-radius: 10px; /* Rounded corners for a softer look */
+  box-shadow: 0 6px 22px rgba(0,0,0,0.6);
+  backdrop-filter: blur(2px);
+  border: 1px solid rgba(140,255,110,0.06);
+}
+
+.container h1{
+  margin:0 0 1rem 0;
+  letter-spacing:1px;
+  color:var(--text);
+  font-weight:600;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.6);
+}
+
+textarea{  /* the text input box */
+  width:100%;
+  box-sizing:border-box;
+  background: #021302;   /* very dark green */
+  color: var(--text);
+  border: 1px solid rgba(140,255,110,0.06);
+  padding:0.75rem;
+  border-radius:8px;
+  resize:vertical;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
+  margin-bottom:0.6rem;
+  min-height:120px;
+  outline:none;
+}
+
+/* buttons */
+.HashButtons{
+  display:flex;
+  gap:0.6rem;
+  flex-wrap:wrap;
+  margin-bottom:0.75rem;
+}
+
+.HashButtons button{
+  background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.1));
+  color:var(--accent);
+  border:1px solid rgba(140,255,110,0.12);
+  padding:0.5rem 0.8rem;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+  font-family:inherit;
+  transition: transform .08s ease, background .12s ease;
+}
+
+.HashButtons button:hover{ transform:translateY(-2px); background: rgba(0,0,0,0.2); }
+.HashButtons button:active{ transform:translateY(0); }
+
+h2{ margin:0.5rem 0 0.3rem 0; color:var(--muted); font-weight:600; }
+
+.footer {
+  margin-top:1rem;
+  font-size:0.85rem;
+  color: rgba(191,255,191,0.6);
+}
+
+/* responsive */
+@media (max-width:640px){
+  .container{ margin:1rem; padding:1rem; }
+  textarea{ min-height:96px; }
+}
+
+/* performance / prefers reduced motion */
+@media (prefers-reduced-motion: reduce){
+  #matrixCanvas, .overlay { display:none; }
+}

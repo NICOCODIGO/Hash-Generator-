@@ -5,21 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hash Generator</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
-    <script src="script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script> <!-- CryptoJS Library for hashing algorithms -->
+    <script src="matrix.js" defer></script> <!-- Matrix Background Script -->
+    <script src="script.js" defer></script> <!-- For ervythung else invoolving js -->
 </head>
-<body>
+<body> <!-- The Body is where the website begins always in HTML, this is where my background starts -->
+    
+    <canvas id="matrixCanvas"></canvas> <!-- Canvas is drawing a graphic design and animating it  -->
+    
+    <div class="overlay"></div> <!-- Overlay is a dark layer over the background to make text more readable -->
+    
     <div class="container">
         <h1>Hash Generator</h1>
+        
         <textarea id="TextBox" placeholder="Enter text here..."></textarea> 
-        <div class="HashButtons">
+        
+        <div class="HashButtons"> <!-- Buttons to generate different types of hashes -->
             <button onclick="generateHash('MD5')">Generate MD5</button>
             <button onclick="generateHash('SHA1')">Generate SHA-1</button>
             <button onclick="generateHash('SHA256')">Generate SHA-256</button>
             <button onclick="generateHash('SHA512')">Generate SHA-512</button>
         </div>
+        
         <h2>Output:</h2>
         <textarea id="OutputText" readonly placeholder="Hash will appear here..."></textarea>
     </div>
+    
 </body>
 </html>
