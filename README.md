@@ -18,11 +18,11 @@ and so this project will let me try all that at once
 - Canvas will use random characters to be flashed with the color green and to make it rain after
 - since the MD5 is outdated it will be done by **CryptoJS** 
 
-===========
+----------
 To try it, simply Download/Clone repo and open `index.html` in a browser
 
 after that, type anything and see how hashing will turn your text into random hex! 
-==============
+----------
 Thanks for checking this out! Feedback and tips for beginner like me are welcome! 
 
 
