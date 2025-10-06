@@ -16,7 +16,11 @@ and so this project will let me try all that at once
 ## HOW IT WORKS:
 
 - Canvas will use random characters to be flashed with the color green and to make it rain after
-- since the MD5 is outdated it will be done by **CryptoJS** 
+- since the MD5 is outdated it will be done by **CryptoJS**
+
+------------------------------------------------------------
+
+<img width="1440" height="792" alt="Screenshot 2025-10-06 at 12 26 23 AM" src="https://github.com/user-attachments/assets/9e385f4d-e6b4-48ce-aa68-b45deea0d5f7" />
 
 ----------
 To try it, simply Download/Clone repo and open `index.html` in a browser
